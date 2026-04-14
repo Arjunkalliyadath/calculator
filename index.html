@@ -3,34 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Advanced Calculator - Tech Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display">
-            <input type="text" id="result" disabled>
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="grid-bg"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="scanlines"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Code Terminal Effect -->
+        <div class="terminal-label">$ calculator_app.exe</div>
+        
+        <!-- Calculator Card -->
+        <div class="calculator-card">
+            <!-- Top Bar -->
+            <div class="calc-top-bar">
+                <div class="window-buttons">
+                    <span class="btn-minimize"></span>
+                    <span class="btn-maximize"></span>
+                    <span class="btn-close"></span>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">ACTIVE</span>
+                </div>
+            </div>
+
+            <!-- Calculator Content -->
+            <div class="calc-content">
+                <!-- Display -->
+                <div class="display-container">
+                    <div class="display-label">Output</div>
+                    <div class="display">
+                        <input type="text" id="result" disabled placeholder="0" class="display-input">
+                        <div class="cursor"></div>
+                    </div>
+                </div>
+
+                <!-- Keypad -->
+                <div class="keypad">
+                    <button class="key key-func" onclick="clearDisplay()">AC</button>
+                    <button class="key key-func" onclick="appendToDisplay('/')>÷</button>
+                    <button class="key key-func" onclick="appendToDisplay('*')">×</button>
+                    <button class="key key-func" onclick="deleteLast()">DEL</button>
+
+                    <button class="key" onclick="appendToDisplay('7')">7</button>
+                    <button class="key" onclick="appendToDisplay('8')">8</button>
+                    <button class="key" onclick="appendToDisplay('9')">9</button>
+                    <button class="key key-operator" onclick="appendToDisplay('+')">+</button>
+
+                    <button class="key" onclick="appendToDisplay('4')">4</button>
+                    <button class="key" onclick="appendToDisplay('5')">5</button>
+                    <button class="key" onclick="appendToDisplay('6')">6</button>
+                    <button class="key key-operator" onclick="appendToDisplay('-')">−</button>
+
+                    <button class="key" onclick="appendToDisplay('1')">1</button>
+                    <button class="key" onclick="appendToDisplay('2')">2</button>
+                    <button class="key" onclick="appendToDisplay('3')">3</button>
+                    <button class="key key-operator" onclick="appendToDisplay('.')" style="font-size: 1.5em;">•</button>
+
+                    <button class="key key-zero" onclick="appendToDisplay('0')">0</button>
+                    <button class="key key-equals" onclick="calculateResult()">=</button>
+                </div>
+            </div>
+
+            <!-- Bottom Info Bar -->
+            <div class="calc-bottom-bar">
+                <span class="info-text">Advanced Calculator v2.0</span>
+                <span class="info-icons">
+                    <span class="icon-box">⚙</span>
+                    <span class="icon-box">◊</span>
+                </span>
+            </div>
         </div>
-        <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="appendToDisplay('/')">/</button>
-            <button onclick="appendToDisplay('*')">*</button>
-            <button onclick="appendToDisplay('-')">-</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('+')">+</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="calculateResult()">=</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
+
+        <!-- Side Panel -->
+        <div class="side-panel">
+            <div class="panel-content">
+                <h3>Features</h3>
+                <ul>
+                    <li><span class="dot"></span>Real-time Computing</li>
+                    <li><span class="dot"></span>Precision Arithmetic</li>
+                    <li><span class="dot"></span>Error Handling</li>
+                    <li><span class="dot"></span>Keyboard Support</li>
+                </ul>
+                <div class="divider"></div>
+                <h4>Keyboard</h4>
+                <p class="kbd-hint">ESC to clear • ENTER/= to calculate</p>
+            </div>
         </div>
     </div>
+
+    <!-- Floating Code Elements -->
+    <div class="code-float code-1">{ }</div>
+    <div class="code-float code-2">[ ]</div>
+    <div class="code-float code-3">( )</div>
+
     <script src="script.js"></script>
 </body>
 </html>
