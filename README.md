@@ -1,3 +1,6 @@
+
+https://github.com/user-attachments/assets/9da038cc-b241-40e0-a827-13cf389fc605
+
 # ⚡ Advanced Calculator v2.0
 
 A sleek, cyberpunk-themed calculator web app built with pure HTML, CSS, and JavaScript — deployed and live on Render.
@@ -9,7 +12,7 @@ A sleek, cyberpunk-themed calculator web app built with pure HTML, CSS, and Java
 ## 📸 Preview
 
 > A fully animated, tech-aesthetic calculator with real-time computation, keyboard support, and a glowing UI — right in your browser.
-
+https://github.com/user-attachments/assets/9da038cc-b241-40e0-a827-13cf389fc605
 ---
 
 ## ✨ Features
